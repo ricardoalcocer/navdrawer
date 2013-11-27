@@ -12,11 +12,12 @@ import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.annotations.Kroll;
 
 import org.appcelerator.titanium.TiApplication;
-import org.appcelerator.titanium.proxy.TiViewProxy;
+//import org.appcelerator.titanium.proxy.TiViewProxy;
 import org.appcelerator.kroll.common.Log;
 
 import android.R;
 import android.app.Activity;
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
@@ -49,29 +50,39 @@ public class NavdrawerModule extends KrollModule
 
 	// Methods
 	@Kroll.method
-	public void attach(TiViewProxy tableViewProxy)
+	public void attach()
 	{
+		// as a first step I'll play around with the actual activity and actionbar to make sure
+		// I can properly get access to it
+		
+		// some feedback is always nice
+		Log.d(TAG, "called the attach method");
+		
+		// declare stuff
 		TiApplication appContext = TiApplication.getInstance();
 		Activity activity = appContext.getCurrentActivity();
+		ActionBar actionBar;
 		
-		Log.d(TAG, "called the attach method");
-		// Within which the entire activity is enclosed
-	    DrawerLayout mDrawerLayout;
-
-	    // ListView represents Navigation Drawer
-	    //ListView mDrawerList;
-
-	    // ActionBarDrawerToggle indicates the presence of Navigation Drawer in the action bar
-	    ActionBarDrawerToggle mDrawerToggle;
-
-	    // Title of the action bar
-	    String mTitle = "This is a test";
-	    
-	    
-	    
-	    //getActionBar().setDisplayHomeAsUpEnabled(true);
-	    
-		//return "hello world";
+		if (!TiApplication.isUIThread()) {
+			
+			// Within which the entire activity is enclosed
+		    //DrawerLayout mDrawerLayout;
+	
+		    // ListView represents Navigation Drawer
+		    //ListView mDrawerList;
+	
+		    // ActionBarDrawerToggle indicates the presence of Navigation Drawer in the action bar
+		    //ActionBarDrawerToggle mDrawerToggle;
+	
+		    // Play with the action bar
+		    String mTitle = "This is a test";
+		    String mSubtitle= "This is the subtitle";
+		    
+		    actionBar = activity.getActionBar();
+		    actionBar.setDisplayHomeAsUpEnabled(true);
+		    actionBar.setSubtitle(mSubtitle);
+		    actionBar.setTitle(mTitle); 
+		}
 	}
 }
 

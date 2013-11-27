@@ -3,11 +3,12 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="build/.apt_generated"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/Users/ralcocer/android-sdk/platforms/android-8/android.jar"/>
 	<classpathentry kind="lib" path="/Users/ralcocer/android-sdk/add-ons/addon-google_apis-google-18/libs/maps.jar"/>
 	<classpathentry kind="lib" path="/Users/ralcocer/Library/Application Support/Titanium/mobilesdk/osx/3.2.0/android/titanium.jar"/>
 	<classpathentry kind="lib" path="/Users/ralcocer/Library/Application Support/Titanium/mobilesdk/osx/3.2.0/android/kroll-common.jar"/>
 	<classpathentry kind="lib" path="/Users/ralcocer/Library/Application Support/Titanium/mobilesdk/osx/3.2.0/android/kroll-apt.jar"/>
 	<classpathentry kind="lib" path="lib/android-support-v4.jar"/>
+	<classpathentry kind="lib" path="/Users/ralcocer/android-sdk/platforms/android-11/android.jar"/>
+	<classpathentry kind="lib" path="/Users/ralcocer/android-sdk/platforms/android-8/android.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
