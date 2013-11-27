@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1
+apiversion: 2
+description: Native Android Navigation Drawer
+author: Ricardo Alcocer
+license: MIT
+copyright: 2013 Ricardo Alcocer
+
+
+# these should not be edited
+name: navdrawer
+moduleid: com.alcoapps.navigationdrawer
+guid: ff47772b-cb23-4301-be64-d13c38a253cb
+platform: android
+minsdk: 3.2.0
